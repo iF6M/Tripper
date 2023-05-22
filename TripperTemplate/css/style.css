@@ -408,6 +408,16 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+.form-container {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: space-around;
+  position: relative;
+  flex-direction: initial;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
@@ -421,7 +431,7 @@ h6, .h6 {
 
 @media (max-width: 1200px) {
   .display-1 {
-    font-size: calc(1.725rem + 5.7vw) ;
+    font-size:alc(1.725rem + 5.7vw) ;
   }
 }
 
