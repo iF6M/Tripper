@@ -27,7 +27,6 @@
 </head>
 
 <body>
-   
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative nav-bar p-0">
@@ -43,12 +42,13 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nnav-item nav-link">Home</a>
-                        <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="book.html" class="nav-item nav-link">Book</a>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
+                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nnav-item nav-link">Home</a>
+                            <a href="service.html" class="nav-item nav-link">Services</a>
+                            <a href="book.html" class="nav-item nav-link">Book</a>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -60,105 +60,70 @@
     <div class="container-fluid page-header">
         <div class="container">
             <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-                <h3 class="display-4 text-white text-uppercase">Services</h3>
+                <h3 class="display-4 text-white text-uppercase">Contact</h3>
                 <div class="d-inline-flex text-white">
                     <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
                     <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                    <p class="m-0 text-uppercase">Services</p>
+                    <p class="m-0 text-uppercase">Contact</p>
                 </div>
             </div>
         </div>
     </div>
     <!-- Header End -->
 
-
-    <!-- Booking Start -->
-    <div class="container-fluid booking mt-5 pb-5">
-        <div class="container pb-5">
-            <div class="bg-light shadow" style="padding: 30px;">
-                <div class="row align-items-center" style="min-height: 60px;">
-                    <div class="col-md-10">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Destination</option>
-                                        <option value="1">Destination 1</option>
-                                        <option value="2">Destination 1</option>
-                                        <option value="3">Destination 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="mb-3 mb-md-0">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected>Duration</option>
-                                        <option value="1">Duration 1</option>
-                                        <option value="2">Duration 1</option>
-                                        <option value="3">Duration 1</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
-                    </div>
-                </div>
-            </div>
+    <!--Book Start -->
+    <div class="card border-0 form-container" >
+        <div class="card-header bg-primary text-center p-44">
+            <h1 class="text-white m-0">Booking</h1>
         </div>
-    </div>
-    <!-- Booking End -->
-
-
-    <!-- Service Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-3 pb-3">
-                <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-                <h1> Our Services</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                        <h5 class="mb-2">Travel Guide</h5>
-                        <p class="m-0">A special guide is provided at a high level of professionalism in the event that the customer desires to do so and add it to the plan at an appropriate price</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-ticket-alt mx-auto mb-4"></i>
-                        <h5 class="mb-2">Proffer A Suggestion</h5>
-                        <p class="m-0">Presenting a distinguished proposal that includes food, housing, and the most important places, at an affordable price, throughout the Kingdom</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                        <i class="fa fa-2x fa-hotel mx-auto mb-4"></i>
-                        <h5 class="mb-2">Unique Experience</h5>
-                        <p class="m-0">You will have a unique experience based on your preferences and our high quality proposal And the discounts you will get for being our customer</p>
-                    </div>
-                </div>
+        <div class="card-body rounded-bottom bg-white p-5 form-container">
+            <form>
                 
-    <!-- Service End -->
+                <div class="form-container">
+                    <b><label for="areas">Select Your favorite areas : </label></b><br>
+                        <input type="checkbox" id="areas" value="Hufof"><label for="Hufof">Hufof</label><br>
+                        <input type="checkbox" id="areas" value="Almubariz"><label for="Almubariz">Almubariz</label><br>
+                        <input type="checkbox" id="areas" value="Aleuyun"><label for="Aleuyun">Aleuyun</label><br> 
+                        <input type="checkbox" id="areas" value="Altaraf"><label for="Altaraf">Altaraf</label><br>
+                        <input type="checkbox" id="areas" value="Jafr"><label for="Jafr">Jafr</label><br>
+                </div>
+            
+            
+                <div class="mb-3 mb-md-0 form-container"><b><label for="date1">Select your Depart date & Return date :</label></b>
+                    <div class="date" id="date1" data-target-input="nearest">
+                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
+                    </div>
+                </div>
+            
+                <div class="mb-3 mb-md-0 form-container">
+                    <div class="date" id="date2" data-target-input="nearest">
+                        <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
+                    </div>
+                </div>
+            
+            
+                <div class="mb-3 mb-md-0 form-container">
+                    <b><label for="areas">Select Your Preferences : </label></b><br>
+                        <input type="checkbox" id="Preferences" value="Food"><label for="Food">Food</label><br>
+                        <input type="checkbox" id="Preferences" value="Sport"><label for="Sport">Sport</label><br>
+                        <input type="checkbox" id="Preferences" value="Entertainment"><label for="Entertainment">Entertainment</label><br> 
+                        <input type="checkbox" id="Preferences" value="Altaraf"><label for="Altaraf">Altaraf</label><br>
+                </div>
+                <div class="mb-3 mb-md-0 form-container">
+                    <b><label for="areas">Select Your Budget : </label></b><br>
+                        <input type="checkbox" id="Budget" value="200RS or lower"><label for="200 or lower">200RS OR Lower</label><br>
+                        <input type="checkbox" id="Budget" value="800RS"><label for="800RS">800RS</label><br>
+                        <input type="checkbox" id="Budget" value="1200RS"><label for="1200RS">1200RS</label><br> 
+                        <input type="checkbox" id="Budget" value="20000"><label for="20000">20000</label><br>
+                        <div class="text-center">
+                            <button class="btn btn-primary py-3 px-4" type="submit" id="sendBookingButton">Book</button>
+                        </div>
+                </div>
+            </div>
+            </form>
+            </div>
+    <!--Book End -->
 
-
-   
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
         <div class="row pt-5">
@@ -166,7 +131,7 @@
                 <a href="" class="navbar-brand">
                     <h1 class="text-primary"><span class="text-white">TRIP</span>PER</h1>
                 </a>
-                <p>Presenting a distinguished proposal that includes food, housing, and the most important places, at an affordable price, throughout the Kingdom</p>
+                <p>Sed ipsum clita tempor ipsum ipsum amet sit ipsum lorem amet labore rebum lorem ipsum dolor. No sed vero lorem dolor dolor</p>
                 <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-outline-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -177,9 +142,9 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contact Us</h5>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>5943 Street, Alahsa, KSA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+966 592588075</p>
-                <p><i class="fa fa-envelope mr-2"></i>Tripper@gmail.com</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
                 <div class="w-100">
                     
                 </div>
