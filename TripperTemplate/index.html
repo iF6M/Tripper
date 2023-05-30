@@ -188,23 +188,32 @@
                         <div class="card-body rounded-bottom bg-white p-5">
                             <form action="signUp.php" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your name" required="required" />
+                                    <input type="text" class="form-control p-4" name="name" placeholder="Your name" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your email" required="required" />
+                                    <input type="email" class="form-control p-4" name="email" placeholder="Your email" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control p-4" id="password" placeholder="Your password" required="required" />
+                                    <input type="password" class="form-control p-4" name="password" placeholder="Your password" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" class="form-control p-4" name="phoneNumber" placeholder="Your phone number" pattern="[0-9]{10}" required="required" />
+                                    <script>
+                                        const phoneInput = document.getElementById('tel');
+                                        phoneInput.addEventListener('input', (event) => {
+                                          event.target.value = event.target.value.replace(/\D/g, '');
+                                        });
+                                      </script>
                                 </div>
                                 <div class="form-group">
                                     <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected id="gender">Select Your Gender  </option>
+                                        <option selected name="gender">Select Your Gender  </option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select px-4" style="height: 47px;">
+                                    <select class="custom-select px-4" style="height: 47px;" name="gender">
                                     <option selected>Select Your Country </option>
                                     <option value="Saudi Arabia" id="Saudi Arabia">Saudi Arabia</option>
                                     <option value="Egypt" id="Egypt" >Egypt</option>

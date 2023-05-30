@@ -2,13 +2,11 @@
 
 $conn = mysqli_connect("localhost","root","root", "Users");
 
-if (!$conn) {
-  die("Connection failed: "" . mysqli_connect_error());
-}
 
 $name = $_POST['name'];
 $email = $_POST['email'];
 $password = $_POST['password'];
+$phoneNumber = $_POST['phoneNumber'];
 $gender = $_POST['gender'];
 $country = $_POST['country'];
 $birthday = $_POST['birthday'];
