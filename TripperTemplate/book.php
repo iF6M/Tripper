@@ -1,4 +1,4 @@
-
+<?php include_once './reservation.php'; ?>
   
 <!DOCTYPE html>
 <html lang="en">
@@ -77,11 +77,13 @@
             <h1 class="text-white m-0">Book</h1>
         </div>
         <div class="card-body rounded-bottom bg-white p-5 form-container">
-            <form action="book.php" method="post" >
+            <div><?php echo $status ?></div>
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post" >
             <div class="mb-3 mb-md-0 form-container"><b><label for="name">Enter Your Name:</label></b>
                     <div class="name">
-                        <input type="text" placeholder="Your name" name="name"/>
+                        <input type="text" placeholder="Your name" name="name" value="<?php echo $name; ?>"/>
                     </div>
+                    <div class="text-danger"><?php echo $errors['name'] ?></div>
                 </div>
                 <div class="form-container">
                     <b><label for="areas">Select Your favorite areas : </label></b><br>
@@ -90,19 +92,24 @@
                         <input type="checkbox" id="areas" value="Aleuyun" name="AreaID[]"><label for="Aleuyun">Aleuyun</label><br> 
                         <input type="checkbox" id="areas" value="Altaraf" name="AreaID[]"><label for="Altaraf">Altaraf</label><br>
                         <input type="checkbox" id="areas" value="Jafr" name="AreaID[]"><label for="Jafr">Jafr</label><br>
+                        <div class="text-danger"><?php echo $errors['AreaID'] ?></div>
                 </div>
             
             
                 <div class="mb-3 mb-md-0 form-container"><b><label for="date1">Select your Depart date & Return date :</label></b>
                     <div class="date" id="date1" data-target-input="nearest">
-                        <input type="date" class="form-control p-4 datetimepicker-input" name="StartDate'" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
+                        <input type="date" class="form-control p-4 datetimepicker-input" value="<?php echo $StartDate; ?>"
+                            name="StartDate" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker"/>
                     </div>
+                    <div class="text-danger"><?php echo $errors['StartDate'] ?></div>
                 </div>
             
                 <div class="mb-3 mb-md-0 form-container">
                     <div class="date" id="date2" data-target-input="nearest">
-                        <input type="date" class="form-control p-4 datetimepicker-input" name="EndData" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
+                        <input type="date" class="form-control p-4 datetimepicker-input" value="<?php echo $EndData; ?>"
+                            name="EndData" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker"/>
                     </div>
+                    <div class="text-danger"><?php echo $errors['EndData'] ?></div>
                 </div>
             
             
@@ -117,6 +124,7 @@
                         <input type="checkbox" name="Preferences[]" id="Preferences" value="Children"><label for="Children">Children</label><br>
                         <input type="checkbox" name="Preferences[]" id="Preferences" value="Art"><label for="Art">Art</label><br>
                         <input type="checkbox" name="Preferences[]" id="Preferences" value="Cultural"><label for="Cultural">Cultural</label><br>
+                        <div class="text-danger"><?php echo $errors['Preferences'] ?></div>
                 </div>
                 <div class="mb-3 mb-md-0 form-container">
                     <b><label for="areas">Select Your Budget : </label></b><br>
@@ -124,6 +132,7 @@
                         <input type="radio" id="Budget" name="Budget" value="800RS"><label for="800RS">800RS</label><br>
                         <input type="radio" id="Budget" name="Budget" value="1200RS"><label for="1200RS">1200RS</label><br> 
                         <input type="radio" id="Budget" name="BUdget" value="20000"><label for="20000">20000</label><br>
+                        <div class="text-danger"><?php echo $errors['Budget'] ?></div>
                         <div class="text-center">
                             <input type="hidden" name="book" >
                             <button class="btn btn-primary py-3 px-4" type="submit" id="sendBookingButton" name="sendBookingButton">Book</button>

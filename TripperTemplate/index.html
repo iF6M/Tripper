@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,9 +45,9 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                     <div class="navbar-nav ml-auto py-0">
-                        <a href="index.html" class="nnav-item nav-link">Home</a>
+                        <a href="index.php" class="nnav-item nav-link">Home</a>
                         <a href="service.html" class="nav-item nav-link">Services</a>
-                        <a href="book.html" class="nav-item nav-link">Book</a>
+                        <a href="book.php" class="nav-item nav-link">Book</a>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
             </nav>
@@ -65,7 +66,7 @@
                         <div class="p-3" style="max-width: 900px;">
                             <h4 class="text-white text-uppercase mb-md-3">Tours & Travel</h4>
                             <h1 class="display-3 text-white mb-md-4">Let's Discover The World Together</h1>
-                            <a href="" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
+                            <a href="book.php" class="btn btn-primary py-md-3 px-md-5 mt-2">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -188,32 +189,26 @@
                         <div class="card-body rounded-bottom bg-white p-5">
                             <form action="signUp.php" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control p-4" name="name" placeholder="Your name" required="required" />
+                                    <input type="text" class="form-control p-4" id="name" name="UserName" placeholder="Your name" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control p-4" name="email" placeholder="Your email" required="required" />
+                                    <input type="email" class="form-control p-4" id="email" name="UserEmail" placeholder="Your email" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control p-4" name="password" placeholder="Your password" required="required" />
+                                    <input type="password" class="form-control p-4" id="password" name="Password" placeholder="Your password" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="tel" class="form-control p-4" name="phoneNumber" placeholder="Your phone number" pattern="[0-9]{10}" required="required" />
-                                    <script>
-                                        const phoneInput = document.getElementById('tel');
-                                        phoneInput.addEventListener('input', (event) => {
-                                          event.target.value = event.target.value.replace(/\D/g, '');
-                                        });
-                                      </script>
+                                    <input type="text" class="form-control p-4" id="num" name="PhoneNo" placeholder="Your Phone Number" required="required" />
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select px-4" style="height: 47px;">
-                                        <option selected name="gender">Select Your Gender  </option>
+                                    <select class="custom-select px-4" style="height: 47px;" name="Sex">
+                                        <option selected id="gender" >Select Your Gender  </option>
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <select class="custom-select px-4" style="height: 47px;" name="gender">
+                                    <select class="custom-select px-4" style="height: 47px;"  name="Country">
                                     <option selected>Select Your Country </option>
                                     <option value="Saudi Arabia" id="Saudi Arabia">Saudi Arabia</option>
                                     <option value="Egypt" id="Egypt" >Egypt</option>
@@ -223,12 +218,14 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="date" class="form-control p-4" name="birthday" id="birthday"placeholder="Enter Your Birthday" required="required">
+                                    <input type="date" class="form-control p-4" name="Birthday" id="birthday"placeholder="Enter Your Birthday" required="required">
                             </div>
                                 
-                                <div>
-                                    <button class="btn btn-primary btn-block py-3" type="submit">Sign Up</button>
+                                <div >
+                                    <input type="hidden" name="insert" >
+                                    <button class="btn btn-primary btn-block py-3" type="submit" id="Sign up">Sign Up</button>
                                 </div>
+                                
                             </form>
                         </div>
                     </div>
@@ -248,8 +245,10 @@
                             </div>
                             
                             <div>
-                                <button class="btn btn-primary btn-block py-3" type="submit">Log In</button>
+                                <input type="hidden" name="insert" >
+                                <button class="btn btn-primary btn-block py-3" type="submit" id="log in">Log In</button>
                             </div>
+                           
                         </form>
                     </div>
                 </div>
